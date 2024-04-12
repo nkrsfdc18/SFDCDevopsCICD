@@ -2,7 +2,12 @@ public with sharing class Calculator {
     Public integer N1;
     Public integer N2;
     Public integer N3;
-    public Calculator() {
-
+    public void greaterNumber() {
+   if(N1>N2 && N1>N3){
+  System.debug('Greater Number is'+N1);
+     }else  if(N2>N1 && N1>N3){
+  System.debug('Greater Number is'+N2);
+     }else{
+System.debug('Greater Number is'+N3);
     }
 }
