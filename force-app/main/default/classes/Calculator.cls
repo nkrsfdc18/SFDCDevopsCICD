@@ -8,7 +8,7 @@ public with sharing class Calculator {
      }else  if(N2>N1 && N1>N3){
   System.debug('Greater Number is'+N2);
      }else{
-        \\Greater Number N3.
+        //Greater Number N3.
 System.debug('Greater Number is'+N3);
     }
 }
