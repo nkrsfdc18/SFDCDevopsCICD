@@ -2,7 +2,7 @@
  * Name:Calculator.
  * Author:Naveen.
  * Date:21/04/2024.
- * 
+ * for Calculation purpose.
  * *****************/
 public with sharing class Calculator {
     Public integer N1;
