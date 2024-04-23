@@ -8,8 +8,8 @@ node {
     def SF_USERNAME =env.HUB_ORG_DH
     def SERVER_KEY_CREDENTALS_ID=env.JWT_CRED_ID_DH
     def TEST_LEVEL='RunLocalTests'
-    def PACKAGE_NAME='0Ho1U000000CaUzSAK'
-    def PACKAGE_VERSION
+    //def PACKAGE_NAME='0Ho1U000000CaUzSAK'
+    //def PACKAGE_VERSION
     def SF_INSTANCE_URL = env.SFDC_HOST_DH ?: "https://login.salesforce.com"
 
     def toolbelt = tool 'toolbelt'
