@@ -110,27 +110,25 @@ node {
             // -------------------------------------------------------------------------
 
             stage('Create Package Version') {
-    if (isUnix()) {
-        output = sh returnStdout: true, script: "${toolbelt}/sf package version create --package ${PACKAGE_NAME} --installation-key-bypass --wait 10 --json --target-dev-hub HubOrg"
-    } else {
-        output = bat(returnStdout: true, script: "${toolbelt}/sf package version create --package ${PACKAGE_NAME} --installation-key-bypass --wait 10 --json --target-dev-hub HubOrg").trim()
-        output = output.readLines().drop(1).join(" ")
-    }
+                if (isUnix()) {
+                    output = sh returnStdout: true, script: "${toolbelt}/sf package version create --package ${PACKAGE_NAME} --installation-key-bypass --wait 10 --json --target-dev-hub HubOrg"
+                } else {
+                    output = bat(returnStdout: true, script: "${toolbelt}/sf package version create --package ${PACKAGE_NAME} --installation-key-bypass --wait 10 --json --target-dev-hub HubOrg").trim()
+                    output = output.readLines().drop(1).join(" ")
+                }
 
-    // Wait 5 minutes for package replication.
-    sleep 300
+                // Wait 5 minutes for package replication.
+                sleep 300
 
-    def jsonSlurper = new JsonSlurperClassic()
-    def response
-    if (output) {
-        response = jsonSlurper.parseText(output)
-        PACKAGE_VERSION = response.result.SubscriberPackageVersionId
-        echo PACKAGE_VERSION
-    } else {
-        error 'Output is null or empty.'
-    }
-}
+                def jsonSlurper = new JsonSlurperClassic()
+                def response = jsonSlurper.parseText(output)
 
+                PACKAGE_VERSION = response.result.SubscriberPackageVersionId
+
+                response = null
+
+                echo ${PACKAGE_VERSION}
+            }
 
 
             // -------------------------------------------------------------------------
