@@ -2,18 +2,18 @@
 <apex:form>
 <apex:pageblock title="Greater Number">
 <apex:pageBlockSection title="Greaer Number Information">
-    <apex:pageBlockSectionItem>
-        <apex:inputtext label=Enter Number One value="{!N1}"/>
-    </apex:pageBlockSectionItem>
-    <apex:pageBlockSectionItem>
-        <apex:inputtext label=Enter Number One value="{!N2}"/>
-    </apex:pageBlockSectionItem>
-    <apex:pageBlockSectionItem>
-        <apex:inputtext label=Enter Number One value="{!N3}"/>
-    </apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem>
+    <apex:outputlabel value="Enter Number one"/><apex:inputtext  value="{!N1}"/>
+</apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem>
+    <apex:outputlabel value="Enter Number Two"/><apex:inputtext  value="{!N2}"/>
+</apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem>
+    <apex:outputlabel value="Enter Number Three"/><apex:inputtext  value="{!N3}"/>
+</apex:pageBlockSectionItem>
 <apex:commandButton value="save" action="{!GreaterNumber}"/>
 <apex:pageBlockSection>
-    <apex:outputText>{!res}</apex:outputText>
+<apex:outputText>{!res}</apex:outputText>
 </apex:pageBlockSection>
 </apex:pageBlockSection>
 
