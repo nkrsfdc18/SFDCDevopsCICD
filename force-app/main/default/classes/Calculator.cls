@@ -13,7 +13,7 @@ public with sharing class Calculator {
    if(N1>N2 && N1>N3){
     res=N1;
   System.debug('Greater Number is'+res);
-     }else  if(N2>N1 && N1>N3){
+     }else  if(N2>N1 && N2>N3){
         res=N2;
   System.debug('Greater Number is'+res);
 //Pull Request for latest deployment
