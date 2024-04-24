@@ -1,0 +1,23 @@
+<apex:page controller="Calculator"> 
+<apex:form>
+<apex:pageblock title="Greater Number">
+<apex:pageBlockSection title="Greaer Number Information">
+    <apex:pageBlockSectionItem>
+        <apex:inputtext label=Enter Number One value="{!N1}"/>
+    </apex:pageBlockSectionItem>
+    <apex:pageBlockSectionItem>
+        <apex:inputtext label=Enter Number One value="{!N2}"/>
+    </apex:pageBlockSectionItem>
+    <apex:pageBlockSectionItem>
+        <apex:inputtext label=Enter Number One value="{!N3}"/>
+    </apex:pageBlockSectionItem>
+<apex:commandButton value="save" action="{!GreaterNumber}"/>
+<apex:pageBlockSection>
+    <apex:outputText>{!res}</apex:outputText>
+</apex:pageBlockSection>
+</apex:pageBlockSection>
+
+</apex:pageblock>
+</apex:form>
+
+</apex:page>

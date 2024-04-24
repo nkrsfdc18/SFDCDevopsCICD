@@ -5,18 +5,22 @@
  * for Calculation purpose.
  * *****************/
 public with sharing class Calculator {
-    Public integer N1;
-    Public integer N2;
-    Public integer N3;
+    Public integer N1 {get;set;}
+    Public integer N2 {get;set;}
+    Public integer N3 {get;set;}
+    Public integer res {get;set;}
     public void GreaterNumber() {
    if(N1>N2 && N1>N3){
-  System.debug('Greater Number is'+N1);
+    res=N1;
+  System.debug('Greater Number is'+res);
      }else  if(N2>N1 && N1>N3){
-  System.debug('Greater Number is'+N2);
+        res=N2;
+  System.debug('Greater Number is'+res);
 //Pull Request for latest deployment
      }else{
+        res=N3;
         //Greater Number N3.
-System.debug('Greater Number is'+N3);
+System.debug('Greater Number is'+res);
     }
 }
 }
